@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超级英雄物品数据库</title>
+    <!-- 字体和图标库 -->
+    <link href="https://fonts.cdnfonts.com/css/beaufort-for-lol" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- 主样式表 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>超级英雄物品数据库</h1>
+            <p>探索强大的装备和神器</p>
+        </header>
+        
+        <!-- 搜索和过滤区域 -->
+        <div class="search-filter">
+            <!-- 搜索框 -->
+            <input type="text" class="search-box" placeholder="搜索物品..." id="searchInput" aria-label="搜索物品">
+            
+            <!-- 品质过滤器 -->
+            <select class="filter-select" id="rarityFilter" aria-label="按品质过滤">
+                <option value="">所有品质</option>
+                <option value="神兵">神兵</option>
+                <option value="传说">传说</option>
+                <option value="史诗">史诗</option>
+                <option value="精良">精良</option>
+                <option value="优秀">优秀</option>
+            </select>
+            
+            <!-- 来源过滤器 -->
+            <select class="filter-select" id="sourceFilter" aria-label="按来源过滤">
+                <option value="">所有来源</option>
+                <option value="合成">合成</option>
+                <option value="掉落">掉落</option>
+                <option value="高级商店">高级商店</option>
+                <option value="中级商店">中级商店</option>
+                <option value="初级商店">初级商店</option>
+            </select>
+            
+            <!-- 属性过滤器 -->
+            <select class="filter-select" id="statsFilter" aria-label="按属性过滤">
+                <option value="">任意属性</option>
+                <option value="生命值">生命值</option>
+                <option value="魔法值">魔法值</option>
+                <option value="生命恢复">生命恢复</option>
+                <option value="魔法恢复">魔法恢复</option>
+                <option value="护甲">护甲</option>
+                <option value="攻击力">攻击力</option>
+                <option value="攻击速度">攻击速度</option>
+                <option value="移动速度">移动速度</option>
+                <option value="力量">力量</option>
+                <option value="敏捷">敏捷</option>
+                <option value="智力">智力</option>
+                <option value="暴击率">暴击率</option>
+                <option value="普通攻击伤害抵挡">普通攻击伤害抵挡</option>
+                <option value="生命偷取">生命偷取</option>
+                <option value="闪避">闪避</option>
+                <option value="魔法抗性">魔法抗性</option>
+            </select>
+        </div>
+        
+        <!-- 物品网格容器 - 由JavaScript动态填充 -->
+        <div class="items-grid" id="itemsGrid" aria-live="polite">
+            <!-- 物品卡片将通过JavaScript动态生成 -->
+        </div>
+        
+        <!-- 分页控件 - 由JavaScript动态生成 -->
+        <div class="pagination" id="pagination" aria-label="物品分页">
+            <!-- 分页按钮将通过JavaScript动态生成 -->
+        </div>
+    </div>
+    
+    <!-- 物品详情弹窗 -->
+    <div class="item-details" id="itemDetails" role="dialog" aria-modal="true" aria-labelledby="itemDetailsTitle">
+        <span class="close-btn" id="closeDetails" aria-label="关闭详情">&times;</span>
+        <div class="details-container" id="detailsContent">
+            <!-- 详细信息内容将通过JavaScript动态生成 -->
+        </div>
+    </div>
+    
+    <!-- 主JavaScript文件 -->
+    <script src="script.js"></script>
+</body>
+</html>
